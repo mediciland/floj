@@ -44,7 +44,7 @@ import java.net.URL;
 import static wallettemplate.utils.GuiUtils.*;
 
 public class Main extends Application {
-    public static NetworkParameters params = MainNetParams.get(); //TestNet3Params.get(); //
+    public static NetworkParameters params = TestNet3Params.get(); // MainNetParams.get();
     public static final String APP_NAME = "FloWallet";
     private static final String WALLET_FILE_NAME = APP_NAME.replaceAll("[^a-zA-Z0-9.-]", "_") + "-"
             + params.getPaymentProtocolId();
