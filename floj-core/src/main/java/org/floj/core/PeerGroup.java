@@ -24,7 +24,7 @@ import com.google.common.collect.*;
 import com.google.common.net.*;
 import com.google.common.primitives.*;
 import com.google.common.util.concurrent.*;
-import com.squareup.okhttp.*;
+import okhttp3.*;
 import com.subgraph.orchid.*;
 import net.jcip.annotations.*;
 
@@ -367,8 +367,10 @@ public class PeerGroup implements TransactionBroadcaster {
             HttpDiscovery.Details[] httpSeeds = params.getHttpSeeds();
             if (httpSeeds.length > 0) {
                 // Use HTTP discovery when Tor is active and there is a Cartographer seed, for a much needed speed boost.
-                OkHttpClient httpClient = new OkHttpClient();
-                httpClient.setSocketFactory(torClient.getSocketFactory());
+                OkHttpClient httpClient = new OkHttpClient.Builder()
+                    .socketFactory(torClient.getSocketFactory())
+                    .build();
+
                 List<PeerDiscovery> discoveries = Lists.newArrayList();
                 for (HttpDiscovery.Details httpSeed : httpSeeds)
                     discoveries.add(new HttpDiscovery(params, httpSeed, httpClient));
