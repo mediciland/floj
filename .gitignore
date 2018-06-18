@@ -32,3 +32,8 @@ buildNumber.properties
 
 # Intellij output
 out/
+
+# FLO Wallet Arifacts
+FloWallet-main.spvchain
+FloWallet-main.wallet
+floj-core/test.lock.db
