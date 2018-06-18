@@ -208,13 +208,13 @@ public class AddressTest {
 
     @Test
     public void roundtripBase58() throws Exception {
-        String base58 = "17kzeh4N8g49GFvdDzSf8PjaPfyoD1MndL";
+        String base58 = "F9nYnvA27qGFcxwQKXvVMQn7E8SMQsbaHD";
         assertEquals(base58, Address.fromBase58(null, base58).toBase58());
     }
 
     @Test
     public void comparisonCloneEqualTo() throws Exception {
-        Address a = Address.fromBase58(mainParams, "1Dorian4RoXcnBv9hnQ4Y2C1an6NJ4UrjX");
+        Address a = Address.fromBase58(mainParams, "F9nYnvA27qGFcxwQKXvVMQn7E8SMQsbaHD");
         Address b = a.clone();
 
         int result = a.compareTo(b);
@@ -223,7 +223,7 @@ public class AddressTest {
 
     @Test
     public void comparisonEqualTo() throws Exception {
-        Address a = Address.fromBase58(mainParams, "1Dorian4RoXcnBv9hnQ4Y2C1an6NJ4UrjX");
+        Address a = Address.fromBase58(mainParams, "F9nYnvA27qGFcxwQKXvVMQn7E8SMQsbaHD");
         Address b = a.clone();
 
         int result = a.compareTo(b);
@@ -232,8 +232,8 @@ public class AddressTest {
 
     @Test
     public void comparisonLessThan() throws Exception {
-        Address a = Address.fromBase58(mainParams, "1Dorian4RoXcnBv9hnQ4Y2C1an6NJ4UrjX");
-        Address b = Address.fromBase58(mainParams, "1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P");
+        Address a = Address.fromBase58(mainParams, "F8LbSsrHqAwZ1GiDyvgykANZ8obTp9iQ29");
+        Address b = Address.fromBase58(mainParams, "F9nYnvA27qGFcxwQKXvVMQn7E8SMQsbaHD");
 
         int result = a.compareTo(b);
         assertTrue(result < 0);
@@ -241,8 +241,8 @@ public class AddressTest {
 
     @Test
     public void comparisonGreaterThan() throws Exception {
-        Address a = Address.fromBase58(mainParams, "1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P");
-        Address b = Address.fromBase58(mainParams, "1Dorian4RoXcnBv9hnQ4Y2C1an6NJ4UrjX");
+        Address a = Address.fromBase58(mainParams, "F9nYnvA27qGFcxwQKXvVMQn7E8SMQsbaHD");
+        Address b = Address.fromBase58(mainParams, "F8LbSsrHqAwZ1GiDyvgykANZ8obTp9iQ29");
 
         int result = a.compareTo(b);
         assertTrue(result > 0);
@@ -251,8 +251,8 @@ public class AddressTest {
     @Test
     public void comparisonBytesVsString() throws Exception {
         // TODO: To properly test this we need a much larger data set
-        Address a = Address.fromBase58(mainParams, "1Dorian4RoXcnBv9hnQ4Y2C1an6NJ4UrjX");
-        Address b = Address.fromBase58(mainParams, "1EXoDusjGwvnjZUyKkxZ4UHEf77z6A5S4P");
+        Address a = Address.fromBase58(mainParams, "F8LbSsrHqAwZ1GiDyvgykANZ8obTp9iQ29");
+        Address b = Address.fromBase58(mainParams, "F9nYnvA27qGFcxwQKXvVMQn7E8SMQsbaHD");
 
         int resultBytes = a.compareTo(b);
         int resultsString = a.toString().compareTo(b.toString());
