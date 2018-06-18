@@ -159,43 +159,42 @@ public class AddressTest {
     @Test
     public void p2shAddress() throws Exception {
         // Test that we can construct P2SH addresses
-        Address mainNetP2SHAddress = Address.fromBase58(MainNetParams.get(), "35b9vsyH1KoFT5a5KtrKusaCcPLkiSo1tU");
+        Address mainNetP2SHAddress = Address.fromBase58(MainNetParams.get(), "4Zh75RGJT2aYtgDQbzsrwX56SXxYf6ysU8");
         assertEquals(mainNetP2SHAddress.version, MainNetParams.get().p2shHeader);
         assertTrue(mainNetP2SHAddress.isP2SHAddress());
-        Address testNetP2SHAddress = Address.fromBase58(TestNet3Params.get(), "2MuVSxtfivPKJe93EC1Tb9UhJtGhsoWEHCe");
+        Address testNetP2SHAddress = Address.fromBase58(TestNet3Params.get(), "2P1efmCKpM6tzncRJTFqo3iKbcPv7rrGbAh");
         assertEquals(testNetP2SHAddress.version, TestNet3Params.get().p2shHeader);
         assertTrue(testNetP2SHAddress.isP2SHAddress());
 
         // Test that we can determine what network a P2SH address belongs to
-        NetworkParameters mainNetParams = Address.getParametersFromAddress("35b9vsyH1KoFT5a5KtrKusaCcPLkiSo1tU");
+        NetworkParameters mainNetParams = Address.getParametersFromAddress("4Zh75RGJT2aYtgDQbzsrwX56SXxYf6ysU8");
         assertEquals(MainNetParams.get().getId(), mainNetParams.getId());
-        NetworkParameters testNetParams = Address.getParametersFromAddress("2MuVSxtfivPKJe93EC1Tb9UhJtGhsoWEHCe");
+        NetworkParameters testNetParams = Address.getParametersFromAddress("2P1efmCKpM6tzncRJTFqo3iKbcPv7rrGbAh");
         assertEquals(TestNet3Params.get().getId(), testNetParams.getId());
 
         // Test that we can convert them from hashes
-        byte[] hex = HEX.decode("2ac4b0b501117cc8119c5797b519538d4942e90e");
+        byte[] hex = HEX.decode("db3f9f3fd8cb236033756659fd2c5400f8eeee18");
         Address a = Address.fromP2SHHash(mainParams, hex);
-        assertEquals("35b9vsyH1KoFT5a5KtrKusaCcPLkiSo1tU", a.toString());
-        Address b = Address.fromP2SHHash(testParams, HEX.decode("18a0e827269b5211eb51a4af1b2fa69333efa722"));
-        assertEquals("2MuVSxtfivPKJe93EC1Tb9UhJtGhsoWEHCe", b.toString());
+        assertEquals("4Zh75RGJT2aYtgDQbzsrwX56SXxYf6ysU8", a.toString());
+        Address b = Address.fromP2SHHash(testParams, HEX.decode("d867625a627322622e74d1f8bdb972c96ab86b40"));
+        assertEquals("2P1efmCKpM6tzncRJTFqo3iKbcPv7rrGbAh", b.toString());
         Address c = Address.fromP2SHScript(mainParams, ScriptBuilder.createP2SHOutputScript(hex));
-        assertEquals("35b9vsyH1KoFT5a5KtrKusaCcPLkiSo1tU", c.toString());
+        assertEquals("4Zh75RGJT2aYtgDQbzsrwX56SXxYf6ysU8", c.toString());
     }
 
     @Test
     public void p2shAddressCreationFromKeys() throws Exception {
-        // import some keys from this example: https://gist.github.com/gavinandresen/3966071
-        ECKey key1 = DumpedPrivateKey.fromBase58(mainParams, "5JaTXbAUmfPYZFRwrYaALK48fN6sFJp4rHqq2QSXs8ucfpE4yQU").getKey();
+        ECKey key1 = DumpedPrivateKey.fromBase58(mainParams, "RAXthr2B3F84imyqg2zAJpAufkZSY1wXHANndzKGqKG6vo6ia3Mg").getKey();
         key1 = ECKey.fromPrivate(key1.getPrivKeyBytes());
-        ECKey key2 = DumpedPrivateKey.fromBase58(mainParams, "5Jb7fCeh1Wtm4yBBg3q3XbT6B525i17kVhy3vMC9AqfR6FH2qGk").getKey();
+        ECKey key2 = DumpedPrivateKey.fromBase58(mainParams, "RESBzoj6quXYhMMYvrHRQDQPB44rYf2JtYtagvYLx6EaFR6C6oXr").getKey();
         key2 = ECKey.fromPrivate(key2.getPrivKeyBytes());
-        ECKey key3 = DumpedPrivateKey.fromBase58(mainParams, "5JFjmGo5Fww9p8gvx48qBYDJNAzR9pmH5S389axMtDyPT8ddqmw").getKey();
+        ECKey key3 = DumpedPrivateKey.fromBase58(mainParams, "RFtPSLis6D8UFCHLvoD4YXMrAMpytDMkC7XuUoJaLaJWis7Ccdj3").getKey();
         key3 = ECKey.fromPrivate(key3.getPrivKeyBytes());
 
         List<ECKey> keys = Arrays.asList(key1, key2, key3);
         Script p2shScript = ScriptBuilder.createP2SHOutputScript(2, keys);
         Address address = Address.fromP2SHScript(mainParams, p2shScript);
-        assertEquals("3N25saC4dT24RphDAwLtD8LUN4E2gZPJke", address.toString());
+        assertEquals("4Zh75RGJT2aYtgDQbzsrwX56SXxYf6ysU8", address.toString());
     }
 
     @Test
