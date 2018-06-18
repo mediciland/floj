@@ -77,11 +77,11 @@ public class AddressTest {
     
     @Test
     public void decoding() throws Exception {
-        Address a = Address.fromBase58(testParams, "n4eA2nbYqErp7H6jebchxAN59DmNpksexv");
-        assertEquals("fda79a24e50ff70ff42f7d89585da5bd19d9e5cc", Utils.HEX.encode(a.getHash160()));
+        Address a = Address.fromBase58(testParams, "ofkkGFgK3JBwLqUzTLcuupM4PjPBH56qd4");
+        assertEquals("fb0a5f12b8d54102396fcb259cea199ead505bee", Utils.HEX.encode(a.getHash160()));
 
-        Address b = Address.fromBase58(mainParams, "17kzeh4N8g49GFvdDzSf8PjaPfyoD1MndL");
-        assertEquals("4a22c3c4cbb31e4d03b15550636762bda0baf85a", Utils.HEX.encode(b.getHash160()));
+        Address b = Address.fromBase58(mainParams, "F9nYnvA27qGFcxwQKXvVMQn7E8SMQsbaHD");
+        assertEquals("2b646639fbeade213a81afbb193dff43e2f93d32", Utils.HEX.encode(b.getHash160()));
     }
     
     @Test
