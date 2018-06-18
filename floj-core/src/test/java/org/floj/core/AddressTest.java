@@ -108,7 +108,7 @@ public class AddressTest {
 
         // Check the case of a mismatched network.
         try {
-            Address.fromBase58(testParams, "17kzeh4N8g49GFvdDzSf8PjaPfyoD1MndL");
+            Address.fromBase58(testParams, "F9nYnvA27qGFcxwQKXvVMQn7E8SMQsbaHD");
             fail();
         } catch (WrongNetworkException e) {
             // Success.
