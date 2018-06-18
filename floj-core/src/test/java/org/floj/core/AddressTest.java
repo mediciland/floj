@@ -146,7 +146,7 @@ public class AddressTest {
         NetworkParameters params = Address.getParametersFromAddress("LLxSnHLN2CYyzB5eWTR9K9rS9uWtbTQFb6");
         assertEquals(altNetwork.getId(), params.getId());
         // Check if main network works as before
-        params = Address.getParametersFromAddress("17kzeh4N8g49GFvdDzSf8PjaPfyoD1MndL");
+        params = Address.getParametersFromAddress("F9nYnvA27qGFcxwQKXvVMQn7E8SMQsbaHD");
         assertEquals(MainNetParams.get().getId(), params.getId());
         // Unregister network
         Networks.unregister(altNetwork);
