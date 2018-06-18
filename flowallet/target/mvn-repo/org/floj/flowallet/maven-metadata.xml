@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.floj</groupId>
+  <artifactId>flowallet</artifactId>
+  <versioning>
+    <versions>
+      <version>0.14.8-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20180618221654</lastUpdated>
+  </versioning>
+</metadata>
