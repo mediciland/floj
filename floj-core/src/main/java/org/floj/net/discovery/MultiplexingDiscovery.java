@@ -19,7 +19,7 @@
 package org.floj.net.discovery;
 
 import com.google.common.collect.Lists;
-import com.squareup.okhttp.OkHttpClient;
+import okhttp3.OkHttpClient;
 
 import org.floj.core.NetworkParameters;
 import org.floj.core.VersionMessage;

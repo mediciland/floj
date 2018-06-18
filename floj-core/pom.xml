@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.floj</groupId>
         <artifactId>floj-parent</artifactId>
-        <version>0.14.7</version>
+        <version>0.14.8-SNAPSHOT</version>
     </parent>
 
     <artifactId>floj-core</artifactId>
@@ -213,8 +213,6 @@
                                         <urn>org.hamcrest:hamcrest-core:1.3:jar:null:test:42a25dc3219429f0e5d060061f71acb49bf010a0</urn>
                                         <urn>org.jacoco:jacoco-maven-plugin:0.7.5.201505241946:maven-plugin:null:runtime:0a5e4dbbcd9b00e5ee42d928e10ab84f6f0b0835</urn>
                                         <urn>org.objenesis:objenesis:1.2:jar:null:test:bfcb0539a071a4c5a30690388903ac48c0667f2a</urn>
-                                        <urn>com.squareup.okhttp:okhttp:2.7.2:jar:null:runtime:20f6463eb19ac61960c5d91a094c2f4f0727dc2e</urn>
-                                        <urn>com.squareup.okio:okio:1.6.0:jar:null:runtime:98476622f10715998eacf9240d6b479f12c66143</urn>
                                         <urn>org.slf4j:slf4j-api:1.7.20:jar:null:compile:867d63093eff0a0cb527bf13d397d850af3dcae3</urn>
                                         <urn>org.slf4j:slf4j-jdk14:1.7.20:jar:null:test:b568c92eec50edc922c52b3e759982579170c2be</urn>
                                         <urn>org.sonatype.plugins:nexus-staging-maven-plugin:1.6.5:maven-plugin:null:runtime:455ca2aa8cd14a06608f1538bd6a1efd09561563</urn>
@@ -435,9 +433,9 @@
             <version>1.2.1</version>
         </dependency>
         <dependency>
-            <groupId>com.squareup.okhttp</groupId>
+            <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
-            <version>2.7.2</version>
+            <version>3.10.0</version>
         </dependency>
     </dependencies>
 

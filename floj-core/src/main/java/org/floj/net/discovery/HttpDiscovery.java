@@ -20,7 +20,7 @@ package org.floj.net.discovery;
 
 import com.google.common.annotations.*;
 import com.google.protobuf.*;
-import com.squareup.okhttp.*;
+import okhttp3.*;
 
 import org.flo.crawler.*;
 import org.floj.core.*;
