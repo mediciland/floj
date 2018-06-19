@@ -1,3 +1,9 @@
+# Use this branch to repair failing tests
+The branch, failing-tests-repair, is for the work to repair failing tests. Use it to change tests to work with FLO instead
+of Bitcoin, change code to repair defects that apply to FLO, or skip or remove tests that are not related to FLO.
+
+-------------------------------------------------------------------------------
+
 ### Welcome to floj
 
 The floj library is a Java implementation of the FLO protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of FLO Core. It comes with full documentation and some example apps showing how to use it.
