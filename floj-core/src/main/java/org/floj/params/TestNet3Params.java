@@ -48,8 +48,8 @@ public class TestNet3Params extends AbstractFLONetParams {
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
         port = 17312;  //flo 18333;
         packetMagic = 0xfdc05af2; //flo 0x0b110907;
-        bip32HeaderPub = 0x013440e2; //"Fput" flo 0x043587CF;
-        bip32HeaderPriv = 0x01343c23; //"Fprt" flo 0x04358394;
+        bip32HeaderPub = 0x013440e2; //"Fput" flo. previous value "tpub" was: 0x043587CF;
+        bip32HeaderPriv = 0x01343c23; //"Fprt" flo. previous value "tprv" was: 0x04358394;
 
         majorityEnforceBlockUpgrade = TestNet2Params.TESTNET_MAJORITY_ENFORCE_BLOCK_UPGRADE;
         majorityRejectBlockOutdated = TestNet2Params.TESTNET_MAJORITY_REJECT_BLOCK_OUTDATED;

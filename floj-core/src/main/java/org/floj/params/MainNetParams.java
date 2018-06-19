@@ -50,8 +50,8 @@ public class MainNetParams extends AbstractFLONetParams {
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
         port = 7312;      			// flo 8333;
         packetMagic = 0xfdc0a5f1L;  	//flo 0xf9beb4d9L;
-        bip32HeaderPub = 0x0134406b; //The 4 byte header that serializes in base58 to "Fpub". flo 0x0488B21E; //The 4 byte header that serializes in base58 to "xpub".
-        bip32HeaderPriv = 0x01343c31; //The 4 byte header that serializes in base58 to "Fprv". flo 0x0488ADE4; //The 4 byte header that serializes in base58 to "xprv"
+        bip32HeaderPub = 0x0134406b; //The 4 byte header that serializes in base58 to "Fpub". flo. previous value was: 0x0488B21E; //The 4 byte header that serializes in base58 to "xpub".
+        bip32HeaderPriv = 0x01343c31; //The 4 byte header that serializes in base58 to "Fprv". flo. previous value was: 0x0488ADE4; //The 4 byte header that serializes in base58 to "xprv"
 
         majorityEnforceBlockUpgrade = MAINNET_MAJORITY_ENFORCE_BLOCK_UPGRADE;
         majorityRejectBlockOutdated = MAINNET_MAJORITY_REJECT_BLOCK_OUTDATED;
