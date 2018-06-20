@@ -27,14 +27,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Arrays;
 
-import org.junit.Test;
-import org.floj.core.AddressFormatException;
-import org.floj.core.Base58;
-import org.floj.core.DumpedPrivateKey;
-import org.floj.core.ECKey;
-import org.floj.core.WrongNetworkException;
 import org.floj.params.MainNetParams;
 import org.floj.params.TestNet3Params;
+import org.junit.Test;
 
 public class DumpedPrivateKeyTest {
 
@@ -43,7 +38,7 @@ public class DumpedPrivateKeyTest {
 
     @Test
     public void checkNetwork() throws Exception {
-        DumpedPrivateKey.fromBase58(MAINNET, "5HtUCLMFWNueqN9unpgX2DzjMg6SDNZyKRb8s3LJgpFg5ubuMrk");
+        DumpedPrivateKey.fromBase58(MAINNET, "REyVfsgb69DbyMVudhvkgJSH55ceyniKjoESxRfBmZ2qsPbUBums");
     }
 
     @Test(expected = WrongNetworkException.class)
